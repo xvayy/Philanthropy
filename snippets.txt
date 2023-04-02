@@ -1,0 +1,103 @@
+{
+    // Breakpoint
+    "Single Media Query": {
+        "prefix": "q",
+        "body": ["@media (max-width: \\$breakpoint$1){$2}"]
+    },
+    // Breakpoint
+    "All Media Queries": {
+        "prefix": "qa",
+        "body": [
+            "@media (max-width: \\$breakpoint1450){${1}}",
+            "@media (max-width: \\$breakpoint992){${1}}",
+            "@media (max-width: \\$breakpoint768){${1}}",
+            "@media (max-width: \\$breakpoint480){${1}}"
+        ]
+    },
+    // After
+    "After Pseudo element": {
+        "prefix": "af",
+        "body": [
+            "position: relative;",
+            "&:after {",
+            "	position: absolute;",
+            "	content: \"\";",
+            "   ${1}",
+            "}"
+        ]
+    },
+    "Before Pseudo element": {
+        "prefix": "be",
+        "body": [
+            "position: relative;",
+            "&:before {",
+            "	position: absolute;",
+            "	content: \"\";",
+            "	${1}",
+            "}"
+        ]
+    },
+    // Section
+    "Section snippet": {
+        "prefix": "s",
+        "body": [
+            "<section class=\"section__${1}\">",
+            "    <div class=\"container\">",
+            "        ${2}",
+            "    </div>",
+            "</section>"
+        ]
+    },
+    //Submenu
+    "Section snippet": {
+        "prefix": "sm",
+        "body": [
+            "<ul class="submenu">",
+              "<li class=\"submenu__item\"><a href="#" class="submenu__link">Page 1</a></li>",
+              "<li class=\"submenu__item\"><a href="#" class="submenu__link">Page 1</a></li>",
+              "<li class=\"submenu__item\"><a href="#" class="submenu__link">Page 1</a></li>",
+            "</ul>"
+        ]
+    },
+
+    "Submenu style": {
+        "prefix": "mscss",
+        "body": [
+             "position: relative;",
+        "&.with__submenu {",
+          "position: relative;",
+          "display: flex;",
+          "align-items: center;",
+
+          ".submenu {",
+            "display: flex;",
+            "align-items: center;",
+            "justify-content: center;",
+            "position: absolute;",
+            "left: 0;",
+            "right: 0;",
+            "top: 35px;",
+            "min-width: 100px;",
+            "background-color: $yellowColor;",
+            "display: none;",
+            "z-index: 1;",
+            "&.active {",
+              "display: block;",
+              "animation: fade .3s linear;",
+            "}",
+            "&__item {",
+              "padding: 10px 0;",
+            "}",
+            "&__link {","
+              "display: flex;",
+              "padding: 10px;",
+              "color: $whiteColor;",
+              "&:hover {",
+                "background-color: $greyColor;",
+              "}",
+            "}",
+          "}",
+        "}"
+        ]
+    },
+}

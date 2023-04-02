@@ -1,0 +1,141 @@
+// Container
+.container {
+    max-width: ($containerWidth + $containerPadding) + px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 $containerSidePadding + px;
+
+    @media (max-width: $breakpoint1450) {
+        max-width: 1200px;
+    }
+
+    @media (max-width: $breakpoint992) {
+        max-width: 970px;
+    }
+
+    @media (max-width: $breakpoint768) {
+        max-width: 740px;
+    }
+
+    @media (max-width: $breakpoint480) {
+        max-width: none;
+    }
+}
+
+// Body & Locked
+body {
+    font-family: $fontMain;
+    &.locked {
+        overflow: hidden;
+    }
+    // Dark mode styles
+    &.dark {
+        background: #242424;
+    }
+}
+
+// Animations
+// Fade
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+//Global Style
+
+
+//Buttons
+.btn {
+  $fontThird: 'DMSansBold';
+  padding: 25px 38px;
+  background-color: $yellowColor;
+  color: $mainColor;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  @media (max-width: $breakpoint768){
+    font-size: 16px;
+    padding: 20px 33px;
+  }
+  &:hover {
+      background-color: $hoverColor;
+      color: $whiteColor;
+      transition: 0.3s ease;
+    }
+}
+
+.btn-outline {
+  $fontThird: 'DMSansBold';
+  color: $mainColor;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  padding: 26px 32px;
+  background-color: $whiteColor;
+  border: 1px solid #F0ECE8;
+  box-shadow: 0px 4px 10px rgba(43, 43, 43, 0.04);
+  border-radius: 10px;
+  @media (max-width: $breakpoint768) {
+      font-size: 16px;
+      padding: 20px 33px;
+    }
+  &:hover {
+      background-color: #F0ECE8;
+      color: $hoverColor;
+      transition: 0.3s ease;
+    }
+}
+
+//Text
+
+.subtitle {
+  $fontThird: 'DMSansBold';
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
+  margin-bottom: 20px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: $yellowColor;
+  @media (max-width: $breakpoint480) {
+    font-size: 19px;
+    margin-bottom: 15px;
+  }
+}
+
+.title {
+  $fontSecondary: 'RobotoBold';
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 58px;
+  color: $mainColor;
+  @media (max-width: $breakpoint992){
+    font-size: 36px;
+    line-height: 46px;
+  }
+  @media (max-width: $breakpoint480){
+    font-size: 32px;
+    line-height: 35px;
+  }
+}
+
+.text {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: $greyColor;
+  @media (max-width: $breakpoint992){
+    line-height: 24px;
+    font-size: 17px;
+    margin-bottom: 35px;
+  }
+}
